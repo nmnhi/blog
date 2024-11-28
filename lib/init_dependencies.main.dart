@@ -51,6 +51,11 @@ void _initAuth() {
         serviceLocator(),
       ),
     )
+    ..registerFactory<UserLogout>(
+      () => UserLogout(
+        serviceLocator(),
+      ),
+    )
     // Use case
     ..registerFactory(
       () => CurrentUser(
@@ -62,6 +67,7 @@ void _initAuth() {
       () => AuthBloc(
           userSignUp: serviceLocator(),
           userLogin: serviceLocator(),
+          userLogout: serviceLocator(),
           currentUser: serviceLocator(),
           appUserCubit: serviceLocator()),
     );

@@ -66,6 +66,16 @@ class AuthRepositoryImpl implements AuthRepository {
     );
   }
 
+  @override
+  Future<Either<Failure, String>> logout() async {
+    try {
+      await remoteDataSource.logout();
+      return right('User logged out successfully!');
+    } on ServerException catch (e) {
+      return left(Failure(e.message));
+    }
+  }
+
   Future<Either<Failure, User>> _getUser(Future<User> Function() fn) async {
     try {
       if (!await (connectionChecker.isConnected)) {
