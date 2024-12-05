@@ -4,7 +4,7 @@ import 'package:blog_app/features/blog/domain/entities/blog.dart';
 import 'package:blog_app/features/blog/domain/repository/blog_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
-class GetAllBlogs implements UserCase<List<Blog>, NoParams> {
+class GetAllBlogs implements UseCase<List<Blog>, NoParams> {
   final BlogRepository blogRepository;
 
   GetAllBlogs(this.blogRepository);
