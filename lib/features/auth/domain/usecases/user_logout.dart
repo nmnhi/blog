@@ -3,7 +3,7 @@ import 'package:blog_app/core/usecase/usecase.dart';
 import 'package:blog_app/features/auth/domain/repository/auth_repository.dart';
 import 'package:fpdart/src/either.dart';
 
-class UserLogout implements UserCase<String, NoParams> {
+class UserLogout implements UseCase<String, NoParams> {
   final AuthRepository authRepository;
   UserLogout(this.authRepository);
 

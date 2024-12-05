@@ -6,7 +6,7 @@ import 'package:blog_app/features/blog/domain/entities/blog.dart';
 import 'package:blog_app/features/blog/domain/repository/blog_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
-class UploadBlog implements UserCase<Blog, UploadBlogParams> {
+class UploadBlog implements UseCase<Blog, UploadBlogParams> {
   final BlogRepository blogRepository;
   UploadBlog(this.blogRepository);
   @override
