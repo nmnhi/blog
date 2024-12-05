@@ -1,6 +1,6 @@
 import 'package:blog_app/core/common/cubits/app_user/app_user_cubit.dart';
 import 'package:blog_app/core/common/entities/user.dart';
-import 'package:blog_app/core/usercase/usercase.dart';
+import 'package:blog_app/core/usecase/usecase.dart';
 import 'package:blog_app/features/auth/domain/usecases/user_login.dart';
 import 'package:blog_app/features/auth/domain/usecases/user_logout.dart';
 import 'package:blog_app/features/auth/domain/usecases/user_sign_up.dart';
